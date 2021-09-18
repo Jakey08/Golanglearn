@@ -8,9 +8,8 @@ import (
 
 func main() {
 	rand.Seed(time.Now().Unix())
-
-	for i := 1; i < 3; i++ {
-		fmt.Printf("%d回目のおみくじ結果発表 : ", i)
+	for i := 1; i < 4; i++ {
+		fmt.Printf("%d回目おみくじ結果発表 : ", i)
 
 		number := rand.Intn(8)
 
