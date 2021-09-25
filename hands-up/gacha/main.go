@@ -8,24 +8,23 @@ import (
 
 func main() {
 
-	rand.Seed(time.Now().Unix())
-	num := rand.Intn(100)
+	rand.Seed(time.Now().Unix()) //rand.Seed is not included in 'for loop'.
 
-	// TODO: 変数numが0〜79のときは"ノーマル"、
-	// 80〜94のときは"R"、95〜98のときは"SR"、
-	// それ以外のときは"XR"と表示する
+	for i := 1; i < 12; i++ {
 
-	switch {
-	case num < 80:
-		fmt.Println("ノーマル")
-	case num < 94:
-		fmt.Println("R")
-	case num < 99:
-		fmt.Println("SR")
-	default:
-		fmt.Println("XR")
+		num := rand.Intn(100)
+		fmt.Printf("%d回目", i)
+
+		switch {
+		case num < 80:
+			fmt.Println("ノーマル")
+		case num < 94:
+			fmt.Println("R")
+		case num < 99:
+			fmt.Println("SR")
+		default:
+			fmt.Println("XR")
+		}
 	}
 
 }
-
-//this is commit test2021/09/25
