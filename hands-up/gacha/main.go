@@ -43,23 +43,26 @@ func main() {
 	// 		}
 	// 	}
 
-	result := make([]string, n)
+	result := make(map[string]int)
+	//set up the key and mapping with its value
 	//setup like this 'make([]type length, capacity)'
+	//Users can choose the times to do gacha.
 
-	for i := 0; i < len(result); i++ {
+	for i := 0; i < n; i++ {
 		//the condition of for looop is i < len(result)
 		num := rand.Intn(100)
 		//fmt.Printf("%d回目", i)
 
 		switch {
 		case num < 80:
-			result[i] = "ノーマル"
+			result["ノーマル"]++
+			//increment the value of mapping
 		case num < 95:
-			result[i] = "R"
+			result["R"]++
 		case num < 99:
-			result[i] = "SR"
+			result["SR"]++
 		default:
-			result[i] = "XR"
+			result["XR"]++
 		}
 	}
 
