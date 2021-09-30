@@ -23,26 +23,6 @@ func main() {
 		fmt.Println("もう一度入力してください")
 	}
 
-	// LOOP:
-	// 	//infinite loop
-	// 	for {
-
-	// 		fmt.Print(">")
-	// 		var kind int
-	// 		fmt.Scanln(&kind)
-	// 		//Users can choose 1 or 2. When it's done, it'll break LOOP.
-	// 		switch kind {
-	// 		case 1: //one gacha
-	// 			n = 1
-	// 			break LOOP
-	// 		case 2: //11 times
-	// 			n = 11
-	// 			break LOOP
-	// 		default:
-	// 			fmt.Println("もう一度入力してください")
-	// 		}
-	// 	}
-
 	result := make(map[string]int)
 	//set up the key and mapping with its value
 	//setup like this 'make([]type length, capacity)'
