@@ -1,20 +1,37 @@
-// STEP04: キャラクタを表す型を定義しよう（構造体）
+//sec2 step04-5
 
 package main
 
 import "fmt"
 
+type rarity string
+
+const (
+	rarityN  rarity = "ノーマル"
+	rarutyR  rarity = "R"
+	raritySR rarity = "SR"
+	rarityXR rarity = "XR"
+)
+
+type card struct {
+	rarity rarity //rarity
+	name   string
+}
+
 func main() {
-	var card struct {
-		rarity string // レア度
-		name   string // 名前
-	}
 
-	// TODO: 変数cardのrarityフィールドに"ノーマル"と代入
-	card.rarity = "ノーマル"
-	card.name = "スライム"
+	slime := card{rarity: rarityN, name: "スライム"}
+	fmt.Println(slime)
 
-	// TODO: 変数cardのnameフィールドに"スライム"と代入
+	// var card struct {
+	// 	rarity string // レア度
+	// 	name   string // 名前
+	// }
 
-	fmt.Println(card)
+	// card.rarity = "ノーマル"
+	// card.name = "スライム"
+
+	// fmt.Println(card)
+	dragon := card{rarity: raritySR, name: "ドラゴン"}
+	fmt.Println(dragon)
 }
