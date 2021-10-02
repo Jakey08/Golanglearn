@@ -11,9 +11,7 @@ func main() {
 
 	n := inputN()
 
-	for i := 1; i <= n; i++ {
-		draw()
-	}
+	drawN(n)
 }
 
 //I created inputN_func which is to return n
@@ -30,6 +28,15 @@ func inputN() int {
 	return n
 }
 
+//func f_name(arg_name type, arg_name2 type) type {}
+func drawN(n int) {
+	for i := 1; i <= n; i++ {
+		draw()
+	}
+}
+
+//func func_name() type {}
+//ex) func hello() string{}
 func draw() {
 	num := rand.Intn(100)
 
