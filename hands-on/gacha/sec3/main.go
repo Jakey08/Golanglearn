@@ -6,12 +6,28 @@ import (
 	"time"
 )
 
+type rarity string
+
+const (
+	rarityN  rarity = "ノーマル"
+	rarityR  rarity = "R"
+	raritySR rarity = "SR"
+	rarityXR rarity = "XR"
+)
+
+type card struct {
+	rarity rarity
+	name   string
+}
+
 func main() {
 	rand.Seed(time.Now().Unix())
 
 	n := inputN()
+	results, summary := drawN(n) //substitute multiple results
 
-	drawN(n)
+	fmt.Println(results)
+	fmt.Println(summary)
 }
 
 //I created inputN_func which is to return n
@@ -29,25 +45,32 @@ func inputN() int {
 }
 
 //func f_name(arg_name type, arg_name2 type) type {}
-func drawN(n int) {
-	for i := 1; i <= n; i++ {
-		draw()
+func drawN(n int) ([]card, map[rarity]int) {
+	results := make([]card, n)
+	summary := make(map[rarity]int)
+	//return summary as each result of rarities
+
+	for i := 0; i < n; i++ {
+
+		results[i] = draw() //not draw(n)
+		summary[results[i].rarity]++
 	}
+	return results, summary
 }
 
-//func func_name() type {}
+//func func_name() type(*this is return value) {}
 //ex) func hello() string{}
-func draw() {
+func draw() card {
 	num := rand.Intn(100)
 
 	switch {
 	case num < 80:
-		fmt.Println("ノーマル")
+		return card{rarity: rarityN, name: "スライム"}
 	case num < 95:
-		fmt.Println("R")
+		return card{rarity: rarityR, name: "オーク"}
 	case num < 99:
-		fmt.Println("SR")
+		return card{rarity: raritySR, name: "ドラゴン"}
 	default:
-		fmt.Println("XR")
+		return card{rarity: rarityXR, name: "イフリート"}
 	}
 }
