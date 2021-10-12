@@ -44,7 +44,9 @@ func inputN() int {
 	return n
 }
 
-//func f_name(arg_name type, arg_name2 type) type {}
+//func f_name(arg_name type, arg_name2 type) (return_value1, return_value2){}
+//ex) func swap(x, y int)(int, int){}
+//mapping key and value
 func drawN(n int) ([]card, map[rarity]int) {
 	results := make([]card, n)
 	summary := make(map[rarity]int)
