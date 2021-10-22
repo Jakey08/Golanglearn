@@ -35,3 +35,5 @@ func main() {
 	dragon := card{rarity: raritySR, name: "ドラゴン"}
 	fmt.Println(dragon)
 }
+
+

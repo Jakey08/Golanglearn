@@ -76,3 +76,6 @@ func draw() card {
 		return card{rarity: rarityXR, name: "イフリート"}
 	}
 }
+
+
+
