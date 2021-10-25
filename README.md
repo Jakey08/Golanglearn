@@ -1,4 +1,6 @@
-## This repository is for studying Golang.
+## This repository is for studying Golang with hands-on of 'gacha'.
 
-### I'm working on 'hands-on' which is provided by Gopher Dojo.
+
+
+
 
