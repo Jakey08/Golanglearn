@@ -20,26 +20,37 @@ type card struct {
 	name   string
 }
 
+//added tickets
+type player struct {
+	tickets int
+}
+
+
+
+
+
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	n := inputN()
-	results, summary := drawN(n) //substitute multiple results
+	p := player{tickets:10}
+
+	n := inputN(&p)
+	results, summary := drawN(&p, n) //substitute multiple results
 
 	fmt.Println(results)
 	fmt.Println(summary)
 }
 
 //I created inputN_func which is to return n
-func inputN() int {
+func inputN(p *player) int {
 	var n int
 	for {
 		fmt.Print("ガチャを引く<回数>")
 		fmt.Scanln(&n)
-		if n > 0 {
+		if n > 0 && n <= p.tickets {
 			break
 		}
-		fmt.Println("もう一度入力してくだだい")
+		fmt.Printf("1以上%d以下の数を入力してください\n", p.tickets)
 	}
 	return n
 }
@@ -47,13 +58,12 @@ func inputN() int {
 //func f_name(arg_name type, arg_name2 type) (return_value1, return_value2){}
 //ex) func swap(x, y int)(int, int){}
 //mapping key and value
-func drawN(n int) ([]card, map[rarity]int) {
+func drawN(p *player, n int) ([]card, map[rarity]int) {
+	p.tickets-=n
 	results := make([]card, n)
 	summary := make(map[rarity]int)
 	//return summary as each result of rarities
-
 	for i := 0; i < n; i++ {
-
 		results[i] = draw() //not draw(n)
 		summary[results[i].rarity]++
 	}
@@ -76,6 +86,3 @@ func draw() card {
 		return card{rarity: rarityXR, name: "イフリート"}
 	}
 }
-
-
-
