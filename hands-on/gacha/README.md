@@ -1,2 +1,2 @@
-# tentenさんのgachaを作るhands-on
-### 自分勉強用
+# gacha hands-on
+
