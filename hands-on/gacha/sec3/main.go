@@ -42,6 +42,7 @@ func main() {
 }
 
 //I created inputN_func which is to return n
+//this 'int' is the type of return value.
 func inputN(p *player) int {
 	var n int
 	for {
@@ -70,7 +71,7 @@ func drawN(p *player, n int) ([]card, map[rarity]int) {
 	return results, summary
 }
 
-//func func_name() type(*this is return value) {}
+//func func_name() type(return value) {}
 //ex) func hello() string{}
 func draw() card {
 	num := rand.Intn(100)
