@@ -1,6 +1,7 @@
 package gacha
 
-type rarity string
+type Rarity string //パッケージ外へのエクスポートは先頭が大文字になる
+		   //他のパッケージから利用できるようになる
 
 const (
 rarityN  rarity = "N"
@@ -13,13 +14,14 @@ func (r rarity) String() string {
 	return string(r)
 }
 
-type card struct {
-	rarity rarity // レア度
-	name   string // 名前
+//TODO フィールドのエクスポートをする
+
+type Card struct {
+	Rarity Rarity // レア度
+	Name   string // 名前
 }
 
 func (c *card) String() string {
 
-
-return c.rarity.String() + ":" + c.name
+	return c.Rarity.String() + ":" + c.name
 }
