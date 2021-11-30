@@ -13,10 +13,10 @@ func init(){
 	rand.Seed(time.Now().Unix())
 }
 
-func DrawN(p *player, n int) ([]*card, map[Rarity]int) {
+func DrawN(p *player, n int) ([]*Card, map[Rarity]int) {
 	p.draw(n)
 
-	results := make([]*card, n)
+	results := make([]*Card, n)
 	summary := make(map[Rarity]int)
 	for i := 0; i < n; i++ {
 		results[i] = draw()
@@ -32,12 +32,12 @@ func draw() *Card {
 
 	switch {
 	case num < 80:
-		return &card{Rarity: RarityN, Name: "スライム"}
+		return &Card{Rarity: RarityN, Name: "スライム"}
 	case num < 95:
-		return &card{Rarity: RarityR, Name: "オーク"}
+		return &Card{Rarity: RarityR, Name: "オーク"}
 	case num < 99:
-		return &card{Rarity: RaritySR, Name: "ドラゴン"}
+		return &Card{Rarity: RaritySR, Name: "ドラゴン"}
 	default:
-		return &card{Rarity: RarityXR, Name: "イフリート"}
+		return &Card{Rarity: RarityXR, Name: "イフリート"}
 	}
 }
