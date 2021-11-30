@@ -1,41 +1,42 @@
-package main
+// STEP01: ファイルを分けよう
 
+package main
 
 import (
 	"fmt"
 	"math/rand"
+	"github.com/gohandson/gacha-ja/gacha"
 	"time"
 )
 
 func main() {
-// 乱数の種を設定する
-// 現在時刻をUNIX時間にしたものを種とする
-rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().Unix())
 
-p := player{tickets: 10, coin: 100}
+	// TODO: ガチャ券10枚、コイン100枚を持ったプレイヤーを作る
+	p := {ticket: 10, coin : 100}
 
-n := inputN(&p)
-results, summary := drawN(&p, n)
-
-fmt.Println(results)
-fmt.Println(summary)
+	n := inputN(p)
+	// TODO: gacha.DrawN関数を呼び、変数resultsとsummaryに結果を代入する
+	results, summary := gacha.DrawN()
+	fmt.Println(results)
+	fmt.Println(summary)
 }
 
-func inputN(p *player) int {
+// TODO: 引数の型をgacha.Playerのポインタにする
+func inputN(p *gacha.Player) int {
 
-max := p.drawableNum()
-fmt.Printf("ガチャを引く回数を入力してください（最大:%d回）\n", max)
+	max := p.DrawableNum()
+	fmt.Printf("ガチャを引く回数を入力してください（最大:%d回）\n", max)
 
-var n int
-for {
-fmt.Print("ガチャを引く回数>")
-fmt.Scanln(&n)
-// TODO: nが0より大きくmax以下である場合はbreak
-if n > 0 && n <= max {
-break
-}
-fmt.Printf("1以上%d以下の数を入力してください\n", max)
-}
+	var n int
+	for {
+		fmt.Print("ガチャを引く回数>")
+		fmt.Scanln(&n)
+		if n > 0 && n <= max {
+			break
+		}
+		fmt.Printf("1以上%d以下の数を入力してください\n", max)
+	}
 
-return n
+	return n
 }
