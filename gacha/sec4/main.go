@@ -4,15 +4,16 @@ package main
 
 import (
 	"fmt"
+	
 
-	"github.com/Jakey08/Golanglearn/tree/main/hands-on/gacha"
+	"github.com/Jakey08/Golanglearn/tree/main/gacha"
 	)
 
 func main() {
 	rand.Seed(time.Now().Unix())
 
 	// TODO: ガチャ券10枚、コイン100枚を持ったプレイヤーを作る
-	p := gacha.NewPlater(10, 100)
+	p := gacha.NewPlayer(10, 100)
 
 	n := inputN(p)
 	// TODO: gacha.DrawN関数を呼び、変数resultsとsummaryに結果を代入する

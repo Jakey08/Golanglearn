@@ -4,13 +4,13 @@ type Rarity string //パッケージ外へのエクスポートは先頭が大�
 		   //他のパッケージから利用できるようになる
 
 const (
-rarityN  rarity = "N"
-rarityR  rarity = "R"
-raritySR rarity = "SR"
-rarityXR rarity = "XR"
+RarityN  Rarity = "N"
+RarityR  Rarity = "R"
+RaritySR Rarity = "SR"
+RarityXR Rarity = "XR"
 )
 
-func (r rarity) String() string {
+func (r Rarity) String() string {
 	return string(r)
 }
 
