@@ -1,4 +1,4 @@
-package gacha
+package gachapack
 
 type Rarity string //パッケージ外へのエクスポートは先頭が大文字になる
 		   //他のパッケージから利用できるようになる

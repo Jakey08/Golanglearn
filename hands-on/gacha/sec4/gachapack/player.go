@@ -1,4 +1,4 @@
-package gacha
+package gachapack
 
 import "fmt"
 
