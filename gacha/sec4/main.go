@@ -4,9 +4,13 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
+
+	"github.com/Jakey08/Golanglearn/gacha/gachapack"
 	
 
-        "github.com/Jakey08/Golanglearn/gacha"	
+
 	)
 
 func main() {
