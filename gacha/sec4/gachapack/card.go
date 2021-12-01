@@ -21,7 +21,7 @@ type Card struct {
 	Name   string // 名前
 }
 
-func (c *card) String() string {
+func (c *Card) String() string {
 
-	return c.Rarity.String() + ":" + c.name
+	return c.Rarity.String() + ":" + c.Name
 }
