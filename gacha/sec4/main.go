@@ -6,7 +6,7 @@ import (
 	"fmt"
 	
 
-	"github.com/Jakey08/Golanglearn/tree/main/gacha"
+       gachapack "github.com/Jakey08/Golanglearn"	
 	)
 
 func main() {
