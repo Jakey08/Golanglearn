@@ -1,2 +1,0 @@
-# gacha hands-on
-

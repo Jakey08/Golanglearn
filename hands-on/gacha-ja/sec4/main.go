@@ -6,7 +6,7 @@ import (
 	"fmt"
 	
 
-	"github.com/Golanglearn/hands-on/gacha"
+	"github.com/Golanglearn/hands-on/gacha-ja/gacha"
 	
 
 
