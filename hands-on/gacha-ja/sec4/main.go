@@ -4,17 +4,16 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	
 
-	"github.com/Jakey08/Golanglearn/gacha/gachapack"
+	"github.com/Golanglearn/hands-on/gacha-ja/gacha"
 	
 
 
 	)
 
 func main() {
-	rand.Seed(time.Now().Unix())
+	
 
 	// TODO: ガチャ券10枚、コイン100枚を持ったプレイヤーを作る
 	p := gacha.NewPlayer(10, 100)
