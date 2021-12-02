@@ -5,9 +5,7 @@ package main
 import (
 	"fmt"
 	
-
-	"github.com/Golanglearn/hands-on/gacha-ja/gacha"
-	
+	"github.com/gacha_package/gacha"	
 
 
 	)
