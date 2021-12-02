@@ -1,3 +1,2 @@
-module github.com/Jakey08/Golanglearn/gacha
-
+module github.com/Golanglearn/hands-on/gacha-ja
 go 1.17
