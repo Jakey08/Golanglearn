@@ -13,6 +13,7 @@ import (
 func main() {
 	p := gacha.NewPlayer(10, 100)
 
+
 	n := inputN(p)
 	results, summary := gacha.DrawN(p, n)
 
