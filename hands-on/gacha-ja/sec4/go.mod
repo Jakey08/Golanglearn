@@ -1,4 +1,4 @@
-module github.com/gacha_package
+module github.com/Jakey08/Golanglearn
 
 go 1.17
 
