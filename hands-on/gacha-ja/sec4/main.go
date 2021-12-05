@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 	
-	"github.com/gacha_package/gacha"	
+	"github.com/Jakey08/gacha_package/gacha"	
 
 
 	)
