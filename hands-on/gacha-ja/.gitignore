@@ -6,3 +6,5 @@
 npm-debug.log
 .jshintrc
 .vs/
+summary.txt
+result.txt
